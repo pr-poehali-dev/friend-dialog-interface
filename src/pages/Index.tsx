@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Menu from "@/components/Menu";
+import Profile from "@/components/Profile";
+import DialogWindow from "@/components/DialogWindow";
+import FacesGallery from "@/components/FacesGallery";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
+    <div className="h-screen flex flex-col bg-white">
+      <div className="flex-1 flex">
+        {/* Левое меню */}
+        <Menu />
+        
+        {/* Центральная часть с диалоговым окном */}
+        <DialogWindow />
+        
+        {/* Правая часть с профилем */}
+        <Profile />
       </div>
+      
+      {/* Нижняя часть с чередующимися счастливыми лицами */}
+      <FacesGallery />
     </div>
   );
 };
